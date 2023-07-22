@@ -14,16 +14,7 @@ function setTwitterCardMetadata() {
     { name: 'twitter:image', content: 'https://i.ibb.co/X8qTzXJ/27.png' },
     { name: 'twitter:url', content: 'clouds.feltzine.art' },
   ];
-
-  twitterCardMetaTags.forEach((metaTag) => {
-    const tag = document.createElement('meta');
-    tag.setAttribute('name', metaTag.name);
-    tag.setAttribute('content', metaTag.content);
-    document.head.appendChild(tag);
-  });
 }
-
-setTwitterCardMetadata();
 
 function App({ Component, pageProps }: AppProps) {
   const [mounted, setMounted] = React.useState(false);

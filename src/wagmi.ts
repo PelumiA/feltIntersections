@@ -18,7 +18,7 @@ if (infuraKey) {
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   // [mainnet, optimism, arbitrum, goerli, sepolia],
-  [mainnet],
+  [goerli],
   providers as any
 );
 

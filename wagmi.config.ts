@@ -1,6 +1,7 @@
 import { defineConfig } from "@wagmi/cli";
 import { etherscan, react } from "@wagmi/cli/plugins";
 import { mainnet } from "wagmi";
+import { goerli } from "wagmi/chains";
 
 export default defineConfig({
   out: "src/wagmi/generated.ts",
@@ -25,6 +26,18 @@ export default defineConfig({
           name: "zoraDrop",
           address: {
             [mainnet.id]: "0x419074d73cf0852e46b8531b430b1230c348c291",
+          },
+        },
+      ],
+    }),
+    etherscan ({
+      apiKey: process.env.ETHERSCAN_API_KEY!,
+      chainId: goerli.id,
+      contracts: [
+        {
+          name: "intersections",
+          address: {
+            [goerli.id]: "0x91c73d2c23040d7dd6ca649002bac40a6be2bcc2",
           },
         },
       ],
